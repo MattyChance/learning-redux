@@ -7,13 +7,16 @@ class App extends Component {
     super(props);
     this.state = {items: []};
 
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    this.setState({items: this.state.items.concat(this.input.value)});
   }
 
   render() {
     console.log(this.state)
-    const listItems = this.state.items.map( (item) => {
-      return <li>{item}</li>
-    })
 
     return (
       <div className="App">
@@ -21,16 +24,16 @@ class App extends Component {
           <h2>Matty&apos;s To-Do List</h2>
         </div>
 
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <label>
             What do you want to achieve today?
-            <input type="text" name="name"/>
+            <input type="text" ref={ (input) => this.input = input }/>
           </label>
-          <input type="submit" value="Submit" onClick={this.handleClick}/>
+          <input type="submit" value="Submit"/>
         </form>
 
         <ul className="list">
-          {listItems}
+          {this.state.items.map( (item) => {return <li>{item}</li>}) }
         </ul>
 
       </div>
