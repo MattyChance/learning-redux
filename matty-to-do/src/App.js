@@ -43,10 +43,7 @@ class App extends Component {
         </form>
 
         <ul className="list">
-          {this.state.items.map( (item) => {return
-
-              <li>{item}</li>
-            })}
+          {this.state.items.map( (item) => {return <li>{item}</li>})}
         </ul>
 
       </div>
