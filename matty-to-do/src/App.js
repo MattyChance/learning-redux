@@ -1,19 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import {ItemForm} from './itemForm';
+
 class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {items: [], clock: ""};
+    this.state = {clock: ""};
 
-    this.handleSubmit = this.handleSubmit.bind(this);
     this.tick = this.tick.bind(this);
-  }
-
-  handleSubmit(e) {
-    e.preventDefault();
-    this.setState({items: this.state.items.concat(this.input.value)});
   }
 
   tick() {
@@ -34,17 +30,7 @@ class App extends Component {
           <h2>{this.state.clock}</h2>
         </div>
 
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            What do you want to achieve today?
-            <input type="text" ref={ (input) => this.input = input }/>
-          </label>
-          <input type="submit" value="Submit"/>
-        </form>
-
-        <ul className="list">
-          {this.state.items.map( (item) => {return <li>{item}</li>})}
-        </ul>
+        <ItemForm />
 
       </div>
     );
