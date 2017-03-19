@@ -5,7 +5,7 @@ export class ItemForm extends Component {
   constructor(props) {
     super(props);
     this.state = {items: []}
-    
+
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
