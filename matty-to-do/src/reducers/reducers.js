@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
 
-const todo = (state, action) => {
+export const todo = (state, action) => {
   switch (action.type) {
     case 'ADD_TODO':
       return {
@@ -24,7 +24,7 @@ const todo = (state, action) => {
   }
 }
 
-const todos = (state = [], action) => {
+export const todos = (state = [], action) => {
   switch (action.type) {
     case 'ADD_TODO':
       return [
@@ -39,7 +39,7 @@ const todos = (state = [], action) => {
   }
 }
 
-const visibilityFilter = ( state = 'SHOW ALL', action) => {
+export const visibilityFilter = ( state = 'SHOW ALL', action) => {
   switch (action.type) {
     case 'SET_VISIBILITY_FILTER':
       return action.filter;
@@ -48,10 +48,12 @@ const visibilityFilter = ( state = 'SHOW ALL', action) => {
   }
 }
 
-export const todoApp = combineReducers({
+const todoApp = combineReducers({
   todos: todos,
   visibilityFilter: visibilityFilter
 })
+
+export default todoApp
 //
 // function todoApp(state = {}, action) => {
 //   return {

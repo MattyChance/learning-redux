@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css';
 
-import Clock from '../components/clock.js'
+import {Clock} from '../components/clock.js'
 
 import AddTodo from '../containers/addTodo.jsx'
 import VisibleTodoList from '../containers/visibleTodoList.jsx'

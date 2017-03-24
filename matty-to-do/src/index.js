@@ -3,8 +3,8 @@ import {render} from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 
-import {todoApp} from './reducers/reducers.js'
-import {App} from './components/App.js'
+import todoApp from './reducers/reducers.js'
+import App from './components/App.js'
 
 import './index.css'
 
