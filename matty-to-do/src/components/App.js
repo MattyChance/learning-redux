@@ -6,6 +6,8 @@ import {Clock} from '../components/clock.js'
 import AddTodo from '../containers/addTodo.jsx'
 import VisibleTodoList from '../containers/visibleTodoList.jsx'
 import Footer from '../components/footer.jsx'
+import ContactSection from '../components/contactSection.jsx'
+
 
 const App = () => {
 
@@ -21,7 +23,10 @@ const App = () => {
         <AddTodo />
         <VisibleTodoList />
         <Footer />
+      </div>
 
+      <div>
+        <ContactSection />
       </div>
 
 
