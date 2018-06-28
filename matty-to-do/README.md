@@ -2,6 +2,7 @@ some changes.
 
 some other changes.
 
+changes made in github;
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
